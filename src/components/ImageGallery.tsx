@@ -9,7 +9,9 @@ export default function ImageGallery() {
     offset: ["start start", "end end"]
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-65vw"]);
+  // By using percentages of the element's width, it becomes 100% responsive.
+  // -60% shifts exactly 2 cards to the left, bringing the 3rd card into view.
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
 
   return (
     <section ref={targetRef} className={styles.scrollSection}>
@@ -29,27 +31,16 @@ export default function ImageGallery() {
 
         <motion.div style={{ x }} className={styles.carousel}>
           <div className={styles.card}>
-            <img src="/assets/images/3gR8NWuMVhLe6zp0Kji7YfCy5E.png" alt="A quiet moment" className={styles.image} />
-            <p className={styles.desc}>A quiet moment where ancient culture, dramatic landscapes, and island spirituality come together.</p>
+            <img src="/assets/images/wo_die_berge_rufen/haus-von-aussen.webp" alt="Haus von außen" className={styles.image} />
+            <p className={styles.desc}>Herzlich Willkommen in Tiefenbach. Ein Ort, an dem die Berge hautnah sind und der Alltag verblasst.</p>
           </div>
           <div className={styles.card}>
-            <img src="/assets/images/5xlWlkx6bm4YIbTWhz74XcIwLI0.png" alt="Hidden waterfall sanctuary" className={styles.image} />
-            <p className={styles.desc}>A hidden waterfall sanctuary where lush jungle, flowing water, and quiet island magic meet.</p>
-          </div>
-          
-          <div className={styles.textCard}>
-            <h2 className={styles.heading}>
-              Tiefenbach bei Oberstdorf ist dein idealer Ausgangspunkt für schöne Wanderungen.
-            </h2>
-          </div>
-
-          <div className={styles.card}>
-            <img src="/assets/images/y8rJfiTSwkzHg20ylVzMnrVXqM.png" alt="Dramatic coastal escape" className={styles.image} />
-            <p className={styles.desc}>A dramatic coastal escape where turquoise waters, golden sands, and rugged cliffs create pure island awe.</p>
+            <img src="/assets/images/wo_die_berge_rufen/zimmer.webp" alt="Zimmer" className={styles.image} />
+            <p className={styles.desc}>Dein gemütlicher Rückzugsort. Ausgestattet mit heimischem Holz und viel Liebe zum Detail.</p>
           </div>
           <div className={styles.card}>
-            <img src="/assets/images/RKQ1fzXQlu6gkOlbWLmjmoF0o8.png" alt="Endless rice fields" className={styles.image} />
-            <p className={styles.desc}>Endless rice fields unfolding in quiet harmony, offering a true taste of island life.</p>
+            <img src="/assets/images/wo_die_berge_rufen/geissalpsee.jpg" alt="Geißalpsee" className={styles.image} />
+            <p className={styles.desc}>Der atemberaubende Geißalpsee liegt fast direkt vor der Haustür – dein Startpunkt ins Abenteuer.</p>
           </div>
         </motion.div>
         

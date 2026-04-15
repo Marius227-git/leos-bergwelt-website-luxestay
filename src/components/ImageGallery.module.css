@@ -1,6 +1,8 @@
 .scrollSection {
   position: relative;
-  height: 300vh; /* creates scroll depth */
+  /* Reduced height means the user scrolls less distance vertically to complete the animation,
+     making the lateral movement significantly faster and smoother! */
+  height: 200vh;
   background-color: var(--color-bg);
 }
 
@@ -63,14 +65,13 @@
 }
 
 @media (max-width: 768px) {
+  .scrollSection {
+    height: 150vh; /* Extremely fast and smooth side-scroll on mobile */
+  }
   .card {
     width: 300px;
   }
   .image {
     height: 350px;
-  }
-  .textCard {
-    width: 350px;
-    padding: 0 2rem;
   }
 }
