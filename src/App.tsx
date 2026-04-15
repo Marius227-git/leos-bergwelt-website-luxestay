@@ -3,6 +3,7 @@ import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import MaskReveal from './components/MaskReveal';
 import Hero from './components/Hero';
+import IntroSection from './components/IntroSection';
 import ReviewsBanner from './components/ReviewsBanner';
 import ImageGallery from './components/ImageGallery';
 import RoomsList from './components/RoomsList';
@@ -40,6 +41,7 @@ function App() {
       <MaskReveal>
         <Hero />
       </MaskReveal>
+      <IntroSection />
       <ReviewsBanner />
       <ImageGallery />
       <RoomsList />
