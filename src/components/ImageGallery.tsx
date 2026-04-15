@@ -39,16 +39,16 @@ export default function ImageGallery() {
 
         <motion.div style={{ x }} className={styles.carousel}>
           <div className={styles.card}>
-            <img src="/assets/images/wo_die_berge_rufen/haus-von-aussen.webp" alt="Haus von außen" className={styles.image} />
-            <p className={styles.desc}>Herzlich Willkommen in Tiefenbach. Ein Ort, an dem die Berge hautnah sind und der Alltag verblasst.</p>
-          </div>
-          <div className={styles.card}>
             <img src="/assets/images/wo_die_berge_rufen/zimmer.webp" alt="Zimmer" className={styles.image} />
             <p className={styles.desc}>Dein gemütlicher Rückzugsort. Ausgestattet mit heimischem Holz und viel Liebe zum Detail.</p>
           </div>
           <div className={styles.card}>
             <img src="/assets/images/wo_die_berge_rufen/geissalpsee.jpg" alt="Geißalpsee" className={styles.image} />
             <p className={styles.desc}>Der atemberaubende Geißalpsee liegt fast direkt vor der Haustür – dein Startpunkt ins Abenteuer.</p>
+          </div>
+          <div className={styles.card}>
+            <img src="/assets/images/wo_die_berge_rufen/haus-von-aussen.webp" alt="Haus von außen" className={styles.image} />
+            <p className={styles.desc}>Herzlich Willkommen in Tiefenbach. Ein Ort, an dem die Berge hautnah sind und der Alltag verblasst.</p>
           </div>
         </motion.div>
         
