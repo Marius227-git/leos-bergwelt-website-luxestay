@@ -20,13 +20,13 @@
   width: 100%;
   height: 100%;
   
-  /* We use the existing favicon (Enzian logo) as the mask */
-  mask-image: url('/favicon.svg');
+  /* We use the custom Enzian silhouette as the mask */
+  mask-image: url('/assets/images/enzian-silhouette.svg');
   mask-repeat: no-repeat;
   mask-position: center center;
   
   /* Safari support */
-  -webkit-mask-image: url('/favicon.svg');
+  -webkit-mask-image: url('/assets/images/enzian-silhouette.svg');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center center;
   
