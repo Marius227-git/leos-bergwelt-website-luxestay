@@ -1,12 +1,12 @@
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 700px;
+  height: 100dvh;
+  min-height: 500px;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 5rem;
+  padding-bottom: max(3rem, 5vh);
 }
 
 .imageWrapper {
@@ -59,9 +59,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5vw;
-  font-size: clamp(3rem, 7vw, 7rem);
+  font-size: clamp(3.5rem, 12vw, 8rem);
   line-height: 1;
   font-family: var(--font-spectral);
+  word-break: break-word; /* Ensure caps fit on mobile */
+  hyphens: auto;
 }
 
 .title span {

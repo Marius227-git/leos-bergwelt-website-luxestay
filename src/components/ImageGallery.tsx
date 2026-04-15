@@ -23,7 +23,7 @@ export default function ImageGallery() {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2 className={styles.heading}>
-            Built in Bali in 2018, Luxestay is a 32-room retreat where the island does the talking and guests keep coming back to listen.
+            Wo die Berge rufen und Ruhe einkehrt.
           </h2>
         </motion.div>
 
@@ -39,7 +39,7 @@ export default function ImageGallery() {
           
           <div className={styles.textCard}>
             <h2 className={styles.heading}>
-              Step outside and Bali begins - temples, waterfalls, rice fields, and coastline, all within reach.
+              Tiefenbach bei Oberstdorf ist dein idealer Ausgangspunkt für schöne Wanderungen.
             </h2>
           </div>
 

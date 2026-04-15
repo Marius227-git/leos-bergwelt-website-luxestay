@@ -3,10 +3,8 @@ import styles from './ReviewsBanner.module.css';
 
 export default function ReviewsBanner() {
   const reviews = [
-    { platform: 'Homing.com', rating: '9.5', max: '/10' },
-    { platform: 'Boardly.com', rating: '9.7', max: '/10' },
-    { platform: 'Expedra', rating: '9', max: '/10' },
-    { platform: 'Tripscout', rating: '4.1', max: '/5' },
+    { platform: 'Airbnb', rating: '4.8', max: '/10 Sterne' },
+    { platform: 'Booking.com', rating: '9.5', max: '/10' }
   ];
 
   return (

@@ -20,8 +20,8 @@ export default function Hero() {
         style={{ y }}
       >
         <img 
-          src="/assets/images/9C6LidXc4kZwTLlq45fjUyE3ePE.jpg" 
-          alt="Boutique Luxury Hotel in Bali" 
+          src="/assets/images/hero/Oberstdorf_Allgäu_Oberallgäu_Ortsteile_Sommer_Wandern.webp" 
+          alt="Leo's Bergwelt in Oberstdorf" 
           className={styles.heroImage} 
         />
         <div className={styles.overlay}></div>
@@ -34,7 +34,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
         >
-          Discover a tranquil island sanctuary where wellness, nature, and timeless hospitality create space to truly unwind.
+          Wandern. Skifahren. Entspannen.
         </motion.p>
         
         <motion.h1 
@@ -43,9 +43,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span>Stay.</span>
-          <span>Explore.</span>
-          <span className={styles.italic}>Feel alive</span>
+          <span>LEOS</span>
+          <span>BERGWELT</span>
         </motion.h1>
       </div>
     </section>
