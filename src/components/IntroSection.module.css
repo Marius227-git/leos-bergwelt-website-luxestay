@@ -79,10 +79,19 @@
   opacity: 0.6;
 }
 
+.imageContainerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 5vw;
+}
+
 .imageContainer {
   width: 100%;
+  max-width: 1200px; /* Constrains it so it doesn't touch the very edges of wide screens */
   height: 50vh;
   margin-top: 2rem;
+  overflow: hidden; /* Necessary to clip the scaled image */
 }
 
 .transitionImage {

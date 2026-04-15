@@ -68,20 +68,26 @@ export default function IntroSection() {
         </motion.div>
       </div>
 
-      {/* Transition image spanning the section bottom */}
-      <motion.div 
-        className={styles.imageContainer}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1.2 }}
-      >
-        <img 
-          src="/assets/images/sektion_2/sektion-2-image.jpg" 
-          alt="Blick auf die Berge" 
-          className={styles.transitionImage} 
-        />
-      </motion.div>
+      {/* Transition image wrapped in constrained layout with subtle scale intro */}
+      <div className={styles.imageContainerWrapper}>
+        <motion.div 
+          className={styles.imageContainer}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <motion.img 
+            src="/assets/images/sektion_2/sektion-2-image.jpg" 
+            alt="Blick auf die Berge" 
+            className={styles.transitionImage} 
+            initial={{ scale: 1.15 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }
