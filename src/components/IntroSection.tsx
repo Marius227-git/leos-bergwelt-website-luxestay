@@ -100,10 +100,10 @@ export default function IntroSection() {
             src="/assets/images/sektion_2/sektion-2-image.jpg" 
             alt="Blick auf die Berge" 
             className={styles.transitionImage} 
-            initial={{ scale: 1.15 }}
+            initial={{ scale: 1.4 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
           />
         </motion.div>
       </div>
