@@ -13,13 +13,32 @@ export default function IntroSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Custom SVG combining Tree and Moon aesthetic from screenshot */}
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-             <path d="M12 2A10 10 0 1 0 22 12"/>
-             <path d="M13 10L13 22"/>
-             <path d="M9 14L13 10L17 14"/>
-             <path d="M10 18L13 14L16 18"/>
-             <path d="M14 6 A 2 2 0 1 0 16 8"/>
+          {/* Custom Mountain SVG with drawing animation */}
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+            {/* Subtly broken outer circle frame */}
+            <motion.path 
+              d="M12 2A10 10 0 1 0 22 12" 
+              initial={{ pathLength: 0, opacity: 0 }}
+              whileInView={{ pathLength: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1.8, ease: "easeInOut" }}
+            />
+            {/* Left dominant mountain */}
+            <motion.path 
+              d="M5 16 L10 8 L15 16" 
+              initial={{ pathLength: 0, opacity: 0 }}
+              whileInView={{ pathLength: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+            />
+            {/* Right overlapping mountain */}
+            <motion.path 
+              d="M12 11 L16 6 L21 16" 
+              initial={{ pathLength: 0, opacity: 0 }}
+              whileInView={{ pathLength: 1, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1.2, delay: 0.7, ease: "easeOut" }}
+            />
           </svg>
         </motion.div>
 
