@@ -1,0 +1,65 @@
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+@media (min-width: 1024px) {
+  .row {
+    flex-direction: row;
+  }
+  .reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.imageCol {
+  flex: 1;
+  position: relative;
+  min-height: 50vh;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textCol {
+  flex: 1;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+}
+
+.textContent {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+.desc {
+  font-family: var(--font-inter);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.btn {
+  align-self: flex-start;
+  margin-top: 1rem;
+}
