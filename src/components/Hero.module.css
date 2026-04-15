@@ -6,7 +6,13 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  padding-bottom: max(3rem, 5vh);
+  padding-bottom: 25dvh; /* Push text much higher on mobile */
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-bottom: 5rem; /* Standard desktop padding */
+  }
 }
 
 .imageWrapper {
