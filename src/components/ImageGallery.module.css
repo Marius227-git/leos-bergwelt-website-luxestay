@@ -9,7 +9,7 @@
 .stickyContainer {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100dvh; /* Fix for Safari address bar cutting off bottom text */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,6 +34,8 @@
   padding-left: 5vw;
   padding-right: 5vw;
   width: max-content;
+  will-change: transform; /* Force hardware acceleration on iOS */
+  transform: translateZ(0); /* Hack to enforce GPU composite layer */
 }
 
 .card {

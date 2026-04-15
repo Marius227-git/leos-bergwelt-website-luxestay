@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import styles from './ImageGallery.module.css';
 
 export default function ImageGallery() {
@@ -9,9 +9,17 @@ export default function ImageGallery() {
     offset: ["start start", "end end"]
   });
 
+  // Apply a spring physics smoothing over the native raw scroll progress.
+  // This utterly eliminates DOM scroll stutters common on iOS Safaris and touch devices.
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   // By using percentages of the element's width, it becomes 100% responsive.
   // -60% shifts exactly 2 cards to the left, bringing the 3rd card into view.
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  const x = useTransform(smoothProgress, [0, 1], ["0%", "-60%"]);
 
   return (
     <section ref={targetRef} className={styles.scrollSection}>
