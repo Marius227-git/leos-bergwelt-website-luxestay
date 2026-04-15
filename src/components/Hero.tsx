@@ -20,7 +20,7 @@ export default function Hero() {
         style={{ y }}
       >
         <img 
-          src="/assets/images/hero/Oberstdorf_Allgäu_Oberallgäu_Ortsteile_Sommer_Wandern.webp" 
+          src="/assets/images/hero/wandern.webp" 
           alt="Leo's Bergwelt in Oberstdorf" 
           className={styles.heroImage} 
         />
